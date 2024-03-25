@@ -28,7 +28,8 @@ Customization:
 
 ---
 <h3>📄 License: </h3>
-This profile is provided under [MIT License](https://github.com/IDFDeveloper/flutter.shailesh.porfolio/blob/master/LICENSE). 
+
+This profile is provided under MIT License. See [Here](https://github.com/IDFDeveloper/flutter.shailesh.porfolio/blob/master/LICENSE). 
 
 ---
 Please contact me at limbadiya.sk@gmail.com if you have any feedback for the website. ⭐ Star it, if you like it!
