@@ -34,6 +34,17 @@ class ProjectItemModel {
       prjImages: ["assets/images/pro_nukked_1.jpg", "assets/images/pro_nukked_2.jpg", "assets/images/pro_nukked_3.jpg", "assets/images/pro_nukked_4.jpg",],
     ),
     ProjectItemModel(
+      prjName: "Food Grocery",
+      description:
+      "This app provides a seamless experience for users to order groceries conveniently from their mobile devices.With intuitive navigation and essential features, users can browse through various categories, add items to their cart, and complete orders effortlessly.",
+      image: "",
+      projectUrl: "https://github.com/aivision369/Food-Grocery",
+      language: [
+        "Flutter",
+      ],
+      prjImages: ["assets/images/food_wave1.jpg", "assets/images/food_wave2.jpg", "assets/images/food_wave3.jpg", "assets/images/food_wave4.jpg", "assets/images/food_wave5.jpg"],
+    ),
+    ProjectItemModel(
       prjName: "Diet Box",
       description:
           "Get the trending news on App Diet Box on the roadside stalls to get the best diet food for good health from the Bandee Place. Each and every food which you see on the road makes you meet food trucks and the latest tending food store information.",

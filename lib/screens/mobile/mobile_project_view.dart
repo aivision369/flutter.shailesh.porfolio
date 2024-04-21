@@ -4,6 +4,7 @@ import 'package:shailesh_res_portfolio/model/project_item_model.dart';
 import 'package:shailesh_res_portfolio/untils/app_scroll_behavior.dart';
 
 import 'package:shailesh_res_portfolio/uniqe.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 class MobileProjectView extends StatefulWidget {
   const MobileProjectView({Key? key}) : super(key: key);
@@ -205,15 +206,20 @@ class _MobileProjectViewState extends State<MobileProjectView> {
                     borderRadius: BorderRadius.circular(3),
                     color: kPrimaryDark),
                 child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      "View Projects",
-                      style: GoogleFonts.exo(
-                          color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1),
+                  child: InkWell(
+                    onTap:(){
+                      Utils.launchWebPage(projectModel.projectUrl);
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "View Projects",
+                        style: GoogleFonts.exo(
+                            color: Colors.white,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1),
+                      ),
                     ),
                   ),
                 ),
