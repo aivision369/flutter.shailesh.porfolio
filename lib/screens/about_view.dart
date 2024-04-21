@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../widget/nav_bar.dart';
 import 'package:shailesh_res_portfolio/uniqe.dart';
 
-class AboutView extends StatelessWidget {
+class AboutView extends StatefulWidget {
   const AboutView({Key? key}) : super(key: key);
+
+  @override
+  State<AboutView> createState() => _AboutViewState();
+}
+
+class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
+  bool _isHovered = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +33,37 @@ class AboutView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                            width: 150,
-                            height: 150,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border:
-                                    Border.all(color: kPrimaryDark, width: 2)),
-                            child: Padding(
-                              padding: EdgeInsets.all(2),
-                              child: CircleAvatar(
-                                radius: 70,
-                                backgroundImage:
+                          InkWell(
+                            onHover: (isHovered) {
+                              setState(() {
+                                _isHovered = isHovered;
+                                print(
+                                    "InWell onHover is called : _isHovered : $_isHovered");
+                                
+                              });
+                            },
+                            onTap: () {
+                              print("InWell onTap is called");
+                            },
+                            child: Container(
+                              width: 150,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border:
+                                  Border.all(color: kPrimaryDark, width: 2)),
+                              child: Padding(
+                                padding: EdgeInsets.all(2),
+                                child: AnimatedContainer(
+                                  transformAlignment: Alignment.center,
+                                  duration: Duration(microseconds: 2000),
+                                  transform: _isHovered ? (Matrix4.identity()..scale(1.2)) : Matrix4.identity(),
+                                  child: CircleAvatar(
+                                    radius: 70,
+                                    backgroundImage:
                                     AssetImage("assets/images/profile.png"),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -68,26 +94,41 @@ class AboutView extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                "assets/images/github_logo.png",
-                                width: 25,
-                                height: 25,
+                              InkWell(
+                                onTap:(){
+                                  Utils.launchWebPage(StrRes.github);
+                                },
+                                child: Image.asset(
+                                  "assets/images/github_logo.png",
+                                  width: 25,
+                                  height: 25,
+                                ),
                               ),
                               SizedBox(
                                 width: 8,
                               ),
-                              Image.asset(
-                                "assets/images/linkedin_logo.png",
-                                width: 25,
-                                height: 25,
+                              InkWell(
+                                onTap:(){
+                                  Utils.launchWebPage(StrRes.linkedIn);
+                                },
+                                child: Image.asset(
+                                  "assets/images/linkedin_logo.png",
+                                  width: 25,
+                                  height: 25,
+                                ),
                               ),
                               SizedBox(
                                 width: 8,
                               ),
-                              Image.asset(
-                                "assets/images/stack_overflow_logo.png",
-                                width: 25,
-                                height: 25,
+                              InkWell(
+                                onTap:(){
+                                  Utils.launchWebPage(StrRes.stackOverflow);
+                                },
+                                child: Image.asset(
+                                  "assets/images/stack_overflow_logo.png",
+                                  width: 25,
+                                  height: 25,
+                                ),
                               )
                             ],
                           ),
@@ -155,7 +196,7 @@ class AboutView extends StatelessWidget {
                                   ),
                                   TextSpan(
                                     text:
-                                        ", and I am passionate about technology and products, and mainly, I love what I do",
+                                    ", and I am passionate about technology and products, and mainly, I love what I do",
                                     style: kDesStyle,
                                   )
                                 ]),

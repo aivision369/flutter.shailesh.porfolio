@@ -48,9 +48,10 @@ class _ProjectSliderState extends State<ProjectSlider> {
                   scrollBehavior: AppScrollBehavior(),
                   itemBuilder: (context, index) {
                     return ProjectItemWidget(
-                      index: index,
-                      isHorizontalList: true,
-                    );
+                        index: index,
+                        isHorizontalList: true,
+                        projectUrl:
+                            ProjectItemModel.projectList[index].projectUrl);
                   }),
             ),
             Container(

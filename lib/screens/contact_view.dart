@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../widget/nav_bar.dart';
 import 'package:shailesh_res_portfolio/uniqe.dart';
@@ -114,26 +115,41 @@ class ContactView extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Image.asset(
-                            "assets/images/github_logo.png",
-                            width: 25,
-                            height: 25,
+                          InkWell(
+                            onTap:(){
+                              Utils.launchWebPage(StrRes.github);
+                            },
+                            child: Image.asset(
+                              "assets/images/github_logo.png",
+                              width: 25,
+                              height: 25,
+                            ),
                           ),
                           SizedBox(
                             width: 8,
                           ),
-                          Image.asset(
-                            "assets/images/linkedin_logo.png",
-                            width: 25,
-                            height: 25,
+                          InkWell(
+                            onTap:(){
+                              Utils.launchWebPage(StrRes.linkedIn);
+                            },
+                            child: Image.asset(
+                              "assets/images/linkedin_logo.png",
+                              width: 25,
+                              height: 25,
+                            ),
                           ),
                           SizedBox(
                             width: 8,
                           ),
-                          Image.asset(
-                            "assets/images/stack_overflow_logo.png",
-                            width: 25,
-                            height: 25,
+                          InkWell(
+                            onTap:(){
+                              Utils.launchWebPage(StrRes.stackOverflow);
+                            },
+                            child: Image.asset(
+                              "assets/images/stack_overflow_logo.png",
+                              width: 25,
+                              height: 25,
+                            ),
                           )
                         ],
                       ),

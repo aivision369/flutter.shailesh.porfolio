@@ -12,6 +12,7 @@ const kPrimaryBgGrey = Color(0xff454b58);
 
 const kGreyText = Color(0xffe7e8eb);
 const kGreenText = Color(0xff2ed573);
+const kBorderColor = Color(0xff5c616e);
 
 // Global styles which is used in the project
 final kHeadingStyle = GoogleFonts.exo(
@@ -50,6 +51,10 @@ class StrRes {
   static const java = "Java";
   static const kotlin = "Kotlin";
   static const dart = "Dart";
+
+  static const stackOverflow = "https://stackoverflow.com/users/5815673/aivision";
+  static const github = "https://github.com/aivision369/";
+  static const linkedIn = "https://www.linkedin.com/in/shailesh-limbadiya-053166110/";
 }
 class StrImg {
   static const javaImg = "assets/images/ic_java.png";

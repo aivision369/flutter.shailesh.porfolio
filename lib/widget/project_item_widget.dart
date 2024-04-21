@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shailesh_res_portfolio/model/project_item_model.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../uniqe.dart';
+import 'dart:html' as html;
+import 'dart:js' as js;
 
 class ProjectItemWidget extends StatefulWidget {
   ProjectItemWidget(
       {Key? key,
       required this.index,
       required this.isHorizontalList,
+      required this.projectUrl,
       this.onProjectSelected})
       : super(key: key);
 
   final int index;
   final bool isHorizontalList;
+  final String projectUrl;
   Function(int)? onProjectSelected;
 
   @override
@@ -122,22 +127,27 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget> {
                   }
                 }
               },
-              child: Container(
-                //margin: EdgeInsets.symmetric(horizontal: 20),
-                height: 35,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(3),
-                    color: kPrimaryDark),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      "View Projects",
-                      style: GoogleFonts.exo(
-                          color: Colors.white,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1),
+              child: InkWell(
+                onTap:(){
+                  Utils.launchWebPage(widget.projectUrl);
+                },
+                child: Container(
+                  //margin: EdgeInsets.symmetric(horizontal: 20),
+                  height: 35,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: kPrimaryDark),
+                  child: Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        "View Projects",
+                        style: GoogleFonts.exo(
+                            color: Colors.white,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1),
+                      ),
                     ),
                   ),
                 ),
