@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shailesh_res_portfolio/uniqe.dart';
 import 'package:shailesh_res_portfolio/widget/tag_list.dart';
 
+import '../strings.dart';
 import 'widget/language_widget.dart';
 
 class SkillsView extends StatelessWidget {
@@ -30,7 +31,7 @@ class SkillsView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    StrRes.skills,
+                    AppString.skills,
                     style: kHeadingStyle,
                   ),
                   Image.asset(
@@ -44,7 +45,7 @@ class SkillsView extends StatelessWidget {
                 height: 10,
               ),
               Text(
-                'There are some of the skills I know to develop projects based on its requirement',
+                AppString.skillDes1,
                 style: kDesStyle,
               ),
               const SizedBox(
@@ -56,9 +57,9 @@ class SkillsView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      LanguageWidget(name: StrRes.java, image:StrImg.javaImg),
-                      LanguageWidget(name:StrRes.kotlin, image:StrImg.kotlinImg),
-                      LanguageWidget(name:StrRes.dart, image:StrImg.dartImg),
+                      LanguageWidget(name: AppString.java, image:StrImg.javaImg),
+                      LanguageWidget(name:AppString.kotlin, image:StrImg.kotlinImg),
+                      LanguageWidget(name:AppString.dart, image:StrImg.dartImg),
                     ],
                   ),
                   SizedBox(width:50),

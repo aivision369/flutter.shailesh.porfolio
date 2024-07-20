@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../widget/nav_bar.dart';
 import 'package:shailesh_res_portfolio/uniqe.dart';
@@ -24,9 +26,11 @@ class HeaderView extends StatelessWidget {
           padding: kPageLeftRightPadding,
           child: Column(
             children: [
-              NavigationBar(function: (value){
-                function(value);
-              },),
+              NavigationBar(
+                function: (value) {
+                  function(value);
+                },
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -35,22 +39,18 @@ class HeaderView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Hi! there",
+                        "Hi, ${getGreeting()}",
                         style: GoogleFonts.exo(
                             fontSize: 13,
                             color: Colors.green,
-                            letterSpacing: 1
-                        )/*TextStyle(
-                            fontSize: 13,
-                            color: Colors.green,
-                            letterSpacing: 1)*/,
+                            letterSpacing: 1),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Shailesh Limbadiya",
+                            AppString.title,
                             style: kHeadingStyle,
                           ),
                           Image.asset(
@@ -64,9 +64,11 @@ class HeaderView extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "Let's developer your next \nsuccessful product together!",
+                        AppString.headerMassage,
                         style: GoogleFonts.exo(
-                            fontSize: 15, color: Colors.grey,),
+                          fontSize: 15,
+                          color: Colors.grey,
+                        ),
                       ),
                       SizedBox(
                         height: 40,
@@ -74,50 +76,52 @@ class HeaderView extends StatelessWidget {
                       Row(
                         children: [
                           InkWell(
-                            onTap:()=>function(StrRes.menuProject),
+                            onTap: () => function(AppString.menuProject),
                             child: Container(
                               height: 35,
                               width: 120,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
-                                  color: kPrimaryDark),
+                                  border: Border.all(
+                                      width: 1, color: kPrimaryDark)),
                               child: Center(
                                 child: Padding(
                                   padding: EdgeInsets.all(10),
                                   child: Text(
-                                    "View My Projects",
+                                    AppString.viewMyProject,
                                     style: GoogleFonts.exo(
-                                      color: Colors.white,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1
-                                    ),
+                                        color: Colors.white,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 1),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-
                           InkWell(
-                            onTap:()=>function(StrRes.menuContact),
+                            onTap: () {
+                              Utils.launchWebPage(StrRes.resume);
+                              //function(AppString.menuContact);
+                            },
                             child: Container(
                               margin: EdgeInsets.only(left: 10),
                               height: 35,
                               width: 120,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(3),
-                                  border: Border.all(width: 1,color: kPrimaryDark)),
+                                borderRadius: BorderRadius.circular(3),
+                                color: kPrimaryDark,
+                              ),
                               child: Center(
                                 child: Padding(
                                   padding: EdgeInsets.all(10),
                                   child: Text(
-                                    "Contact Me",
+                                    AppString.resume,
                                     style: GoogleFonts.exo(
-                                        color: kPrimaryDark,
-                                        fontSize: 10,
+                                        color: Colors.white,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.bold,
-                                        letterSpacing: 1
-                                    ),
+                                        letterSpacing: 1),
                                   ),
                                 ),
                               ),
@@ -149,5 +153,16 @@ class HeaderView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String getGreeting() {
+    var hours = DateTime.now().hour;
+    if (hours < 12) {
+      return "Good morning !";
+    } else if (hours < 18) {
+      return "Good afternoon !";
+    } else {
+      return "Good evening !";
+    }
   }
 }

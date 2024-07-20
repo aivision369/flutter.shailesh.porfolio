@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 
 import 'package:shailesh_res_portfolio/uniqe.dart';
 import 'package:shailesh_res_portfolio/untils/utils.dart';
@@ -36,7 +37,7 @@ class MobileAboutView extends StatelessWidget {
               height: 15,
             ),
             Text(
-              "Shailesh Limbadiya",
+              AppString.title,
               style: GoogleFonts.exo(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
@@ -47,7 +48,7 @@ class MobileAboutView extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "Mobile & Web Developer",
+              AppString.mobileWebDev,
               style:
                   GoogleFonts.exo(fontSize: 11, color: kGreyText, letterSpacing: 1),
             ),
@@ -106,7 +107,7 @@ class MobileAboutView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "About Me",
+                        AppString.aboutMe,
                         style: kHeadingStyleMob,
                       ),
                       Image.asset(
@@ -131,7 +132,7 @@ class MobileAboutView extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "Hi, how's it going?",
+                        AppString.aboutMeDes1,
                         style: kDesStyleMob,
                       ),
                     ],
@@ -140,7 +141,7 @@ class MobileAboutView extends StatelessWidget {
                     height: 18,
                   ),
                   Text(
-                    'Now I am going to tell you a little about myself',
+                    AppString.aboutMeDes2,
                     style: kDesStyleMob,
                   ),
                   SizedBox(
@@ -148,16 +149,12 @@ class MobileAboutView extends StatelessWidget {
                   ),
                   RichText(
                     text: TextSpan(
-                        text: 'My name is ',
+                        text: AppString.aboutMeDes3,
                         style: kDesStyleMob,
                         children: [
                           TextSpan(
-                            text: "Shailesh",
-                            style: kDesStyleMob,
-                          ),
-                          TextSpan(
                             text:
-                            ", and I am passionate about technology and products, and mainly, I love what I do",
+                            AppString.aboutMeDes4,
                             style: kDesStyleMob,
                           )
                         ]),
@@ -166,14 +163,14 @@ class MobileAboutView extends StatelessWidget {
                     height: 18,
                   ),
                   Text(
-                    'I participate in the entire process of creating and developing digital products, from creating wireframes to high-fidelity projects ready to be send to the development team.',
+                    AppString.aboutMeDes5,
                     style: kDesStyleMob,
                   ),
                   SizedBox(
                     height: 18,
                   ),
                   Text(
-                    "I have been working in this area for over 8 years",
+                    AppString.aboutMeDes6,
                     style: kDesStyleMob,
                   )
                 ],

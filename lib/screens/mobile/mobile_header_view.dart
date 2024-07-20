@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 
 import 'package:shailesh_res_portfolio/uniqe.dart';
 
@@ -38,7 +39,7 @@ class MobileHeaderView extends StatelessWidget {
                               fontSize: 25, color: Colors.white),
                           children: [
                             TextSpan(
-                                text: "GoDevs",
+                                text: AppString.goDevs,
                                 style: GoogleFonts.exo(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -66,7 +67,7 @@ class MobileHeaderView extends StatelessWidget {
                 height: 40,
               ),
               Text(
-                "Hi! there",
+                AppString.hi,
                 style: GoogleFonts.exo(
                     fontSize: 13, color: Colors.green, letterSpacing: 1),
               ),
@@ -75,7 +76,7 @@ class MobileHeaderView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Shailesh Limbadiya",
+                    AppString.title,
                     style: kHeadingStyleMob,
                   ),
                   Image.asset(
@@ -89,7 +90,7 @@ class MobileHeaderView extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                "Let's developer your next \nsuccessful product together!",
+                AppString.headerMassage,
                 style: GoogleFonts.exo(
                     fontSize: 15, color: Colors.grey, letterSpacing: 1),
               ),
@@ -105,7 +106,7 @@ class MobileHeaderView extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      "View My Projects",
+                      AppString.viewMyProject,
                       style: GoogleFonts.exo(
                           color: Colors.white,
                           fontSize: 15,
@@ -125,7 +126,7 @@ class MobileHeaderView extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      "Contact Me",
+                      AppString.contactMe,
                       style: GoogleFonts.exo(
                           color: kPrimaryDark,
                           fontSize: 15,

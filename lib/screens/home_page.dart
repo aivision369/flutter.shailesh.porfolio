@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shailesh_res_portfolio/core/responsive_layout.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 import 'package:shailesh_res_portfolio/uniqe.dart';
 import 'package:shailesh_res_portfolio/screens/about_view.dart';
 import 'package:shailesh_res_portfolio/screens/contact_view.dart';
@@ -72,13 +73,13 @@ class _HomePageState extends State<HomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              DrawerHeader(
+              /*DrawerHeader(
                 decoration: BoxDecoration(
                   color: kPrimaryDark,
                 ),
                 child: RichText(
                   text: TextSpan(
-                      text: "Hi!",
+                      text: AppString.hi,
                       style: GoogleFonts.exo(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       children: [
                         TextSpan(
-                            text: "\nShailesh K Limbadiya",
+                            text: "\n${AppString.fullName}",
                             style: GoogleFonts.exo(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
@@ -101,13 +102,13 @@ class _HomePageState extends State<HomePage> {
                             ))
                       ]),
                 ),
-              ),
+              ),*/
               ListTile(
                 /*leading: Icon(
                   Icons.account_box_outlined,
                 ),*/
                 title: Text(
-                  StrRes.menuAboutMe,
+                  AppString.menuAboutMe,
                   style: kDrawerStyle,
                 ),
                 onTap: () {
@@ -117,7 +118,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ListTile(
                 title: Text(
-                  StrRes.menuSkill,
+                  AppString.menuSkill,
                   style: kDrawerStyle,
                 ),
                 onTap: () {
@@ -127,7 +128,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ListTile(
                 title: Text(
-                  StrRes.menuProject,
+                  AppString.menuProject,
                   style: kDrawerStyle,
                 ),
                 onTap: () {
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ListTile(
                 title: Text(
-                  StrRes.menuContact,
+                  AppString.menuContact,
                   style: kDrawerStyle,
                 ),
                 onTap: () {
@@ -252,13 +253,13 @@ class _LargeViewState extends State<LargeView> {
           function: (value) {
             setState(() {
               //_isVisible = false; //for hide
-              if (value == StrRes.menuAboutMe) {
+              if (value == AppString.menuAboutMe) {
                 _scrollToPosition(aboutKey);
-              } else if (value == StrRes.menuSkill) {
+              } else if (value == AppString.menuSkill) {
                 _scrollToPosition(skillKey);
-              } else if (value == StrRes.menuProject) {
+              } else if (value == AppString.menuProject) {
                 _scrollToPosition(projectKey);
-              } else if (value == StrRes.menuContact) {
+              } else if (value == AppString.menuContact) {
                 _scrollToPosition(contactKey);
               }
               //for show bottom up arrow button

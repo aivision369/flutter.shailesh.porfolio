@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../widget/nav_bar.dart';
@@ -71,7 +72,7 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                             height: 15,
                           ),
                           Text(
-                            "Shailesh Limbadiya",
+                            AppString.title,
                             style: GoogleFonts.exo(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                             height: 5,
                           ),
                           Text(
-                            "Mobile & Web Developer",
+                            AppString.mobileWebDev,
                             style: GoogleFonts.exo(
                                 fontSize: 11,
                                 color: kGreyText,
@@ -146,7 +147,7 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "About Me",
+                                AppString.aboutMe,
                                 style: kHeadingStyle,
                               ),
                               Image.asset(
@@ -169,7 +170,7 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                               ),
                               SizedBox(width: 5,),
                               Text(
-                                "Hi, how's it going?",
+                                AppString.aboutMeDes1,
                                 style: kDesStyle,
                               ),
                             ],
@@ -178,7 +179,7 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                             height: 18,
                           ),
                           Text(
-                            'Now I am going to tell you a little about myself',
+                            AppString.aboutMeDes2,
                             style: kDesStyle,
                           ),
                           SizedBox(
@@ -186,17 +187,14 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                           ),
                           RichText(
                             text: TextSpan(
-                                text: 'My name is ',
+                                text: AppString.aboutMeDes3,
                                 style:
                                 kDesStyle,
                                 children: [
-                                  TextSpan(
-                                    text: "Shailesh",
-                                    style: kDesStyle,
-                                  ),
+
                                   TextSpan(
                                     text:
-                                    ", and I am passionate about technology and products, and mainly, I love what I do",
+                                    AppString.aboutMeDes4,
                                     style: kDesStyle,
                                   )
                                 ]),
@@ -205,14 +203,14 @@ class _AboutViewState extends State<AboutView> with TickerProviderStateMixin{
                             height: 18,
                           ),
                           Text(
-                            'I participate in the entire process of creating and developing digital products, from creating wireframes to high-fidelity projects ready to be send to the development team.',
+                            AppString.aboutMeDes5,
                             style: kDesStyle,
                           ),
                           SizedBox(
                             height: 18,
                           ),
                           Text(
-                            "I have been working in this area for over 8 years",
+                            AppString.aboutMeDes6,
                             style: kDesStyle,
                           )
                           // Add more widgets here

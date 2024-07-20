@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shailesh_res_portfolio/screens/widget/language_widget.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 
 import 'package:shailesh_res_portfolio/uniqe.dart';
 import 'package:shailesh_res_portfolio/widget/tag_list.dart';
@@ -53,14 +54,14 @@ class MobileSkillsView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  LanguageWidget(name: StrRes.java, image: StrImg.javaImg),
-                  LanguageWidget(name: StrRes.kotlin, image: StrImg.kotlinImg),
+                  LanguageWidget(name: AppString.java, image: StrImg.javaImg),
+                  LanguageWidget(name: AppString.kotlin, image: StrImg.kotlinImg),
                 ],
               ),
               const SizedBox(
                 height: 10,
               ),
-              LanguageWidget(name: StrRes.dart, image: StrImg.dartImg),
+              LanguageWidget(name: AppString.dart, image: StrImg.dartImg),
               const SizedBox(
                 height: 30,
               ),

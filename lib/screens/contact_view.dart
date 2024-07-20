@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../widget/nav_bar.dart';
@@ -36,7 +37,7 @@ class ContactView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Contact",
+                            AppString.contact,
                             style: kHeadingStyle,
                           ),
                           Image.asset(
@@ -50,7 +51,7 @@ class ContactView extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        "Feel free to get in touch, it will be great pleasure\nto be able to help you with your work. contact me know",
+                        AppString.contactDes1,
                         style: kDesStyle,
                       ),
                       SizedBox(
@@ -67,7 +68,7 @@ class ContactView extends StatelessWidget {
                             width: 8,
                           ),
                           Text(
-                            "+91 769-8861-788",
+                            AppString.mobileNo,
                             style: kDesStyle,
                           ),
                         ],
@@ -86,7 +87,7 @@ class ContactView extends StatelessWidget {
                             width: 8,
                           ),
                           Text(
-                            "+91 769-8861-788",
+                            AppString.mobileNo,
                             style: kDesStyle,
                           ),
                         ],
@@ -105,7 +106,7 @@ class ContactView extends StatelessWidget {
                             width: 8,
                           ),
                           Text(
-                            "limbadiya.sk@gmail.com",
+                            AppString.emailId,
                             style: kDesStyle,
                           ),
                         ],
@@ -187,7 +188,7 @@ class ContactView extends StatelessWidget {
                               style: GoogleFonts.exo(fontSize: 20, color: Colors.white),
                               children: [
                                 TextSpan(
-                                    text: "GoDevs",
+                                    text: AppString.goDevs,
                                     style: GoogleFonts.exo(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold,
@@ -206,7 +207,7 @@ class ContactView extends StatelessWidget {
                       child: Align(
                         alignment:Alignment.center,
                         child: Text(
-                          "@ GoDev 2024",
+                          AppString.atGoDevs,
                           style: GoogleFonts.exo(
                               fontSize: 13,
                               color: kGreyText,
@@ -221,11 +222,11 @@ class ContactView extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: RichText(
                           text: TextSpan(
-                              text: "Developed By ",
+                              text: AppString.developedBy,
                               style: GoogleFonts.exo(fontSize: 12, color: kGreyText),
                               children: [
                                 TextSpan(
-                                    text: " Ai Vision",
+                                    text: AppString.aiVision,
                                     style: GoogleFonts.exo(
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold,

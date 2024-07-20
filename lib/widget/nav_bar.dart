@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../strings.dart';
 import '../uniqe.dart';
 
 class NavigationBar extends StatefulWidget {
@@ -12,7 +13,7 @@ class NavigationBar extends StatefulWidget {
 }
 
 class _NavigationBarState extends State<NavigationBar> {
-  final topMenu = [StrRes.menuAboutMe, StrRes.menuSkill, StrRes.menuProject, StrRes.menuContact];
+  final topMenu = [AppString.menuAboutMe, AppString.menuSkill, AppString.menuProject, AppString.menuContact];
 
   List<Widget> topMenuItem() {
     return topMenu.map((menuName) {

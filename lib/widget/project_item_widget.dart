@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shailesh_res_portfolio/model/project_item_model.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 import '../uniqe.dart';
@@ -141,7 +142,7 @@ class _ProjectItemWidgetState extends State<ProjectItemWidget> {
                     child: Padding(
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        "View Projects",
+                        AppString.viewProjects,
                         style: GoogleFonts.exo(
                             color: Colors.white,
                             fontSize: 10,

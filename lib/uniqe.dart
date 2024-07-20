@@ -24,7 +24,8 @@ final kHeadingStyle = GoogleFonts.exo(
 final kDrawerStyle = GoogleFonts.exo(
   fontSize: 13,
   fontWeight: FontWeight.bold,
-  color: Colors.white,);
+  color: Colors.white,
+);
 
 final kHeadingStyleMob = GoogleFonts.exo(
     fontSize: 30,
@@ -41,21 +42,16 @@ final kDesStyleMob =
 //final kDescriptionStyle = GoogleFonts.exo(fontSize: 15, color: Colors.grey);
 
 class StrRes {
-  static const skills = "Skills & Work's With";
-
-  static const menuAboutMe = "About Me";
-  static const menuSkill = "Skill";
-  static const menuProject = "Project";
-  static const menuContact = "Contact";
-
-  static const java = "Java";
-  static const kotlin = "Kotlin";
-  static const dart = "Dart";
-
-  static const stackOverflow = "https://stackoverflow.com/users/5815673/aivision";
+  static const stackOverflow =
+      "https://stackoverflow.com/users/5815673/aivision";
   static const github = "https://github.com/aivision369/";
-  static const linkedIn = "https://www.linkedin.com/in/shailesh-limbadiya-053166110/";
+  static const linkedIn =
+      "https://www.linkedin.com/in/shailesh-limbadiya-053166110/";
+
+  static const resume =
+      "https://drive.google.com/file/d/1m8t2Fzr-PTkBck8n9tS-gN2WSmbhMmM5/view";
 }
+
 class StrImg {
   static const javaImg = "assets/images/ic_java.png";
   static const kotlinImg = "assets/images/ic_kotlin.png";

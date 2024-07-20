@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shailesh_res_portfolio/strings.dart';
 
 import 'screens/home_page.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Shailesh Limbadiya',
+      title: AppString.title,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
