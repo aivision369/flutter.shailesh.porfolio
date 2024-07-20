@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shailesh_res_portfolio/strings.dart';
 
 import 'package:shailesh_res_portfolio/uniqe.dart';
+import 'package:shailesh_res_portfolio/untils/utils.dart';
 
 class MobileHeaderView extends StatelessWidget {
   const MobileHeaderView({Key? key, required this.scaffoldKey})
@@ -101,14 +102,14 @@ class MobileHeaderView extends StatelessWidget {
                 height: 40,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(3),
-                    color: kPrimaryDark),
+                    border: Border.all(width: 1, color: kPrimaryDark),),
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
                       AppString.viewMyProject,
                       style: GoogleFonts.exo(
-                          color: Colors.white,
+                          color: kPrimaryDark,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1),
@@ -116,22 +117,27 @@ class MobileHeaderView extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(3),
-                    border: Border.all(width: 1, color: kPrimaryDark)),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      AppString.contactMe,
-                      style: GoogleFonts.exo(
-                          color: kPrimaryDark,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1),
+              InkWell(
+                onTap:(){
+                  Utils.launchWebPage(StrRes.resume);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(top: 10),
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(3),
+                      color: kPrimaryDark),
+                  child: Center(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        AppString.resume,
+                        style: GoogleFonts.exo(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1),
+                      ),
                     ),
                   ),
                 ),
