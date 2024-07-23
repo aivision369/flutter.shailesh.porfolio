@@ -10,10 +10,12 @@ import 'package:shailesh_res_portfolio/screens/header_view.dart';
 import 'package:shailesh_res_portfolio/screens/project_view.dart';
 import 'package:shailesh_res_portfolio/screens/skills_view.dart';
 
+import 'detailed_project_view.dart';
 import 'mobile/mobile_about_view.dart';
 import 'mobile/mobile_contact_view.dart';
 import 'mobile/mobile_header_view.dart';
 import 'mobile/mobile_project_view.dart';
+import 'mobile/mobile_project_view_new.dart';
 import 'mobile/mobile_skills_view.dart';
 
 final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -226,7 +228,7 @@ class _MobileViewState extends State<MobileView> {
         MobileSkillsView(
           key: skillKey,
         ),
-        MobileProjectView(
+        MobileProjectViewNew(
           key: projectKey,
         ),
         MobileContactView(key: contactKey)
@@ -274,7 +276,7 @@ class _LargeViewState extends State<LargeView> {
         SkillsView(
           key: skillKey,
         ),
-        ProjectView(
+        DetailedProjectView(
           key: projectKey,
         ),
         ContactView(

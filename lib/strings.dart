@@ -27,6 +27,7 @@ class AppString {
   static const project = "Projects";
   static const projectDes1 = "There are some of the projects that I have developer during work";
   static const projectDes2 = "A foreword thinking to building, integrating, testing and keep supporting android app for mobile and tablet devices. Conceptualizing app solution with the latest technology, design theory and large does of code creativity";
+  static const projectDes3 = "There are some of the projects that I have developer during work. \nA foreword thinking to building, integrating, testing and keep supporting android app for mobile and tablet devices. \nConceptualizing app solution with the latest technology, design theory and large does of code creativity";
   static const viewProjects = "View Projects";
 
   static const contact = "Contact";
@@ -38,9 +39,9 @@ class AppString {
   static const atGoDevs = "@ GoDev 2024";
   static const developedBy = "Developed By ";
   static const aiVision = " Ai Vision";
-  static const java = "Java";
-  static const kotlin = "Kotlin";
-  static const dart = "Dart";
+  static const java = "Java\n4+ Years";
+  static const kotlin = "Kotlin\n3+ Years";
+  static const dart = "Dart\n8+ Months";
 
   static const headerMassage ="Let's developer your next \nsuccessful product together!";
   static const viewMyProject="View My Projects";

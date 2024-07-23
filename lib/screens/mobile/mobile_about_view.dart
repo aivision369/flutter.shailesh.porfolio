@@ -24,7 +24,19 @@ class MobileAboutView extends StatelessWidget {
               height: 150,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: kPrimaryDark, width: 2)),
+                  border: Border.all(color: kPrimaryDark, width: 2),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.green.withOpacity(0.5),
+                    // Replace with kGreenText if defined
+                    blurRadius: 15.0,
+                    spreadRadius: 8.0,
+                    offset: Offset(
+                      5.0,
+                      5.0,
+                    ),
+                  )
+                ],),
               child: Padding(
                 padding: EdgeInsets.all(2),
                 child: CircleAvatar(
@@ -34,7 +46,7 @@ class MobileAboutView extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 25,
             ),
             Text(
               AppString.title,
